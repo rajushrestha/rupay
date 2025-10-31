@@ -1,0 +1,25 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"ui": "tui",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"],
+			"env": [
+				"CLOUDFLARE_ACCOUNT_ID",
+				"CLOUDFLARE_DATABASE_ID",
+				"CLOUDFLARE_EMAIL",
+				"CLOUDFLARE_DATABASE_API_TOKEN",
+				"GOOGLE_TAG_MANAGER_ID"
+			]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	}
+}
