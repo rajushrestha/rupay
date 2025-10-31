@@ -20,8 +20,5 @@
 		"packages/*",
 		"apps/*"
 	],
-	"packageManager": "bun@1.2.0",
-	"engines": {
-		"node": ">=20"
-	}
+	"packageManager": "bun@1.2.0"
 }
