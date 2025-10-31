@@ -115,7 +115,7 @@ export default async function Image() {
 							lineHeight: 1.2,
 						}}
 					>
-						Accept Global Payments from Nepal
+						Accept Global Payments as a Nepalese Developer
 					</div>
 					<div
 						style={{

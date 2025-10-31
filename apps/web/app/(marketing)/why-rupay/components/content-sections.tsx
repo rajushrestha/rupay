@@ -4,6 +4,7 @@ import {
 	MERCHANT_OF_RECORD_CONTENT,
 	DEVELOPER_EXPERIENCE_CONTENT,
 	PRICING_CONTENT,
+	RECEIVE_PAYMENTS_CONTENT,
 	WHY_CHOOSE_CONTENT,
 } from "../constants";
 
@@ -17,9 +18,11 @@ export function ContentSections() {
 				</h2>
 				<div className="flex flex-col gap-y-6">
 					{INTRODUCTION_CONTENT.paragraphs.map((paragraph, index) => (
-						<p key={index} className="text-lg text-muted-foreground">
-							{paragraph}
-						</p>
+						<p
+							key={index}
+							className="text-lg text-muted-foreground"
+							dangerouslySetInnerHTML={{ __html: paragraph }}
+						/>
 					))}
 				</div>
 			</section>
@@ -86,6 +89,94 @@ export function ContentSections() {
 							</p>
 						</div>
 					))}
+				</div>
+			</section>
+
+			{/* Receive Payments in Nepal Section */}
+			<section
+				id="receive-payments"
+				className="flex flex-col gap-y-8 px-4 md:px-0"
+			>
+				<h2 className="text-3xl md:text-4xl font-semibold">
+					{RECEIVE_PAYMENTS_CONTENT.title}
+				</h2>
+				<div className="flex flex-col gap-y-6">
+					<p className="text-lg text-muted-foreground">
+						{RECEIVE_PAYMENTS_CONTENT.description}
+					</p>
+					<div className="flex flex-col gap-y-8">
+						{RECEIVE_PAYMENTS_CONTENT.sections.map((section, index) => (
+							<div key={index} className="flex flex-col gap-y-4">
+								<h3 className="text-2xl font-semibold">{section.heading}</h3>
+								<p className="text-lg text-muted-foreground">
+									{section.description}
+								</p>
+								{"details" in section && section.details && (
+									<ul className="flex flex-col gap-y-3 mt-2">
+										{section.details.map((detail, idx) => (
+											<li
+												key={idx}
+												className="flex flex-row items-start gap-x-3"
+											>
+												<CheckIcon className="size-5 text-emerald-500 mt-0.5 shrink-0" />
+												<span className="text-lg text-muted-foreground">
+													{detail}
+												</span>
+											</li>
+										))}
+									</ul>
+								)}
+							</div>
+						))}
+					</div>
+
+					{/* Example Bank Details */}
+					<div className="flex flex-col gap-y-4 mt-6 p-6 rounded-lg border border-border bg-accent">
+						<h3 className="text-2xl font-semibold">
+							{RECEIVE_PAYMENTS_CONTENT.example.title}
+						</h3>
+						<p className="text-lg text-muted-foreground">
+							{RECEIVE_PAYMENTS_CONTENT.example.description}
+						</p>
+						<div className="flex flex-col gap-y-2 mt-4">
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									Bank Name
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.bankName}</span>
+							</div>
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									Branch Name
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.branchName}</span>
+							</div>
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									Account Number
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.accountNumber}</span>
+							</div>
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									Account Holder Name
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.accountHolderName}</span>
+							</div>
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									SWIFT Code
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.swiftCode}</span>
+							</div>
+							<div className="flex flex-col gap-y-1">
+								<span className="text-sm font-semibold text-muted-foreground">
+									Bank Address
+								</span>
+								<span className="text-lg">{RECEIVE_PAYMENTS_CONTENT.example.details.bankAddress}</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 

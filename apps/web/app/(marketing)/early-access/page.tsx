@@ -120,7 +120,7 @@ export default function EarlyAccessPage() {
 										<li className="flex flex-row items-start gap-x-3">
 											<CheckIcon className="size-5 text-emerald-500 mt-0.5 shrink-0" />
 											<span className="text-lg text-muted-foreground">
-												Start accepting global payments from Nepal
+												Start accepting global payments as a Nepalese developer
 											</span>
 										</li>
 										<li className="flex flex-row items-start gap-x-3">

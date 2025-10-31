@@ -32,6 +32,19 @@ export function WaitlistDialog() {
 			.catch(() => {});
 	}, []);
 
+	// Reset form state when dialog closes
+	const handleOpenChange = (open: boolean) => {
+		setWaitlistOpen(open);
+		if (!open) {
+			// Reset form state when closing
+			setTimeout(() => {
+				setEmail("");
+				setStatus("idle");
+				setMessage("");
+			}, 200); // Wait for animation to complete
+		}
+	};
+
 	async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
@@ -79,7 +92,7 @@ export function WaitlistDialog() {
 	}
 
 	return (
-		<Dialog open={waitlistOpen} onOpenChange={setWaitlistOpen}>
+		<Dialog open={waitlistOpen} onOpenChange={handleOpenChange}>
 			<DialogTrigger asChild>
 				<Button size="xl">
 					<span>Get Early Access</span>

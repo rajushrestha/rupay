@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: {
-		default: "Rupay | Accept Global Payments from Nepal",
+		default: "Rupay | Accept Global Payments as a Nepalese Developer",
 		template: "%s | Rupay",
 	},
 	description:
@@ -34,7 +34,9 @@ export const metadata: Metadata = {
 	authors: [{ name: "Rupay" }],
 	creator: "Rupay",
 	publisher: "Rupay",
-	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://rupay.dev"),
+	metadataBase: new URL(
+		process.env.NEXT_PUBLIC_SITE_URL || "https://rupay.dev",
+	),
 	icons: {
 		icon: [
 			{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },

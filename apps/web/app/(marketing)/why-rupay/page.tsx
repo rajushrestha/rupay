@@ -7,14 +7,14 @@ import { CtaSection } from "./components/cta-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+	title: "Why Choose Rupay? | Enable Global Payments for Nepalese Developers",
 	description:
 		"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported. Comprehensive payment platform with merchant of record services.",
 	alternates: {
 		canonical: "/why-rupay",
 	},
 	openGraph: {
-		title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+		title: "Why Choose Rupay? | Enable Global Payments for Nepalese Developers",
 		description:
 			"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
 		type: "article",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+		title: "Why Choose Rupay? | Enable Global Payments for Nepalese Developers",
 		description:
 			"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide.",
 	},

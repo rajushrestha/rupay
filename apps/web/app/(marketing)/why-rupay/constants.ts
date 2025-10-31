@@ -3,6 +3,7 @@ export const SECTIONS = [
 	{ id: "merchant-of-record", label: "Merchant of Record" },
 	{ id: "developer-experience", label: "Developer Experience" },
 	{ id: "pricing", label: "Pricing" },
+	{ id: "receive-payments", label: "Receive Payments in Nepal" },
 	{ id: "why-switch", label: "Why choose Rupay?" },
 ] as const;
 
@@ -26,6 +27,7 @@ export const INTRODUCTION_CONTENT = {
 		"Rupay addresses this critical gap by providing a comprehensive payment platform that enables Nepalese developers to accept payments globally. Built on top of Stripe and inspired by Polar.sh, we've created a solution that handles the complexity of global payments, taxes, and compliance.",
 		"As a global merchant of record, Rupay takes care of taxes and compliance requirements, allowing developers to focus on what they do best: building great software. Currently launching in Nepal, we will expand to other Stripe-unsupported regions, enabling developers worldwide to access global markets and monetize their software products.",
 		"This platform enables Nepalese developers and apps to go global and accept payments worldwide, marking the beginning of a new era for software businesses in Nepal.",
+		"<strong>Important to know:</strong> Rupay is a US-based company (Rupay, LLC), not a Nepalese company registered in Nepal. All payments are received and processed in the United States. We facilitate wire transfers to Nepalese bank accounts for developers based in Nepal. To validate businesses and their nature in Nepal, we have partnered with <strong>Lunover Digital Private Limited</strong>, a Nepalese company that assists us with business validation and verification since there are no APIs and online platforms in Nepal to perform such validations automatically.",
 	],
 } as const;
 
@@ -58,7 +60,7 @@ export const DEVELOPER_EXPERIENCE_CONTENT = {
 		{
 			heading: "Built on Stripe, Inspired by Polar.sh",
 			description:
-				"Rupay is built on top of Stripe's robust payment infrastructure and deeply inspired by Polar.sh, which has proven this platform concept globally. This means you get the reliability of Stripe with a platform designed specifically for regions where Stripe isn't directly supported.",
+				"Rupay is built on top of Stripe's robust payment infrastructure and deeply inspired by Polar.sh, which has proven this platform concept globally. While Polar.sh is open source, Rupay is a proprietary platform. However, we believe in transparency and acknowledge that we've been heavily inspired by Polar.sh's approach and architecture. We encourage you to check out Polar.sh to see the open-source foundation that inspired us.",
 		},
 	],
 } as const;
@@ -79,11 +81,54 @@ export const PRICING_CONTENT = {
 	],
 } as const;
 
+export const RECEIVE_PAYMENTS_CONTENT = {
+	title: "Receive Payments in Nepal",
+	description:
+		"Rupay enables Nepalese developers to receive payments directly to their Nepalese bank accounts via wire transfer. Get paid in your local currency without the hassle of complex international payment setups.",
+	sections: [
+		{
+			heading: "Wire Transfer to Nepalese Bank Accounts",
+			description:
+				"Once payments are processed through Rupay, you can withdraw your earnings directly to your Nepalese bank account via wire transfer. We handle all the complexities of international money transfers, so you can focus on building your software.",
+		},
+		{
+			heading: "Bank Details Required",
+			description:
+				"To receive payments, you'll need to provide your valid WIRE bank details. This includes:",
+			details: [
+				"Bank Name",
+				"Branch Name",
+				"Account Number",
+				"Account Holder Name",
+				"SWIFT Code (Bank Identifier Code)",
+				"Bank Address",
+			],
+		},
+		{
+			heading: "Wire Transfer Fees",
+			description:
+				"Standard wire transfer fees apply and are deducted from the transferred amount by the payment service. Rupay does not charge any additional fees on top of these standard wire transfer fees. The exact fee amount depends on the payment service provider and may vary.",
+		},
+	],
+	example: {
+		title: "Example Bank Details",
+		description: "Here's an example of the bank details format you'll need to provide:",
+		details: {
+			bankName: "Nepal Rastra Bank",
+			branchName: "Kathmandu Central Branch",
+			accountNumber: "1234567890123456",
+			accountHolderName: "John Doe",
+			swiftCode: "NRBLNPKA",
+			bankAddress: "Baluwatar, Kathmandu 44600, Nepal",
+		},
+	},
+} as const;
+
 export const WHY_CHOOSE_CONTENT = {
 	title: "Why choose Rupay?",
 	sections: [
 		{
-			heading: "Access Global Markets from Nepal",
+			heading: "Accept Global Payments as a Nepalese Developer",
 			description:
 				"Rupay enables Nepalese developers to accept payments globally, breaking down the barrier that Stripe's lack of support in Nepal creates. This opens up entirely new markets and revenue opportunities for software businesses in Nepal.",
 		},
@@ -108,9 +153,9 @@ export const WHY_CHOOSE_CONTENT = {
 				"Rupay is designed with modern architecture principles, ensuring scalability and reliability as your business grows. Our flexible system adapts to your needs, whether you're building a simple SaaS product or a complex multi-tenant platform.",
 		},
 		{
-			heading: "Full transparency",
+			heading: "Transparency and Inspiration",
 			description:
-				"Since Rupay is open source, you have complete visibility into how everything works. No black boxes, no hidden surprises. You can review the code, contribute improvements, or even self-host if needed.",
+				"While Rupay is not an open-source platform, we believe in transparency. Rupay is heavily inspired by and built using concepts from Polar.sh, an open-source platform that has proven this business model globally. We acknowledge and appreciate the work of the Polar.sh team. If you're interested in open-source alternatives, we encourage you to check out Polar.sh. Rupay is a US-based company, not registered in Nepal, and we process payments in the United States while facilitating wire transfers to Nepalese bank accounts.",
 		},
 		{
 			heading: "We're deeply invested in your success",

@@ -31,14 +31,14 @@ import { WaitlistDialog } from "../components/waitlist-dialog";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Accept Global Payments from Nepal",
+	title: "Accept Global Payments as a Nepalese Developer",
 	description:
 		"Enable Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
 	alternates: {
 		canonical: "/",
 	},
 	openGraph: {
-		title: "Accept Global Payments from Nepal | Rupay",
+		title: "Accept Global Payments as a Nepalese Developer | Rupay",
 		description:
 			"Enable Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
 		type: "website",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Accept Global Payments from Nepal | Rupay",
+		title: "Accept Global Payments as a Nepalese Developer | Rupay",
 		description:
 			"Enable Nepalese developers to accept global payments and monetize their software worldwide.",
 	},
@@ -65,7 +65,7 @@ export default function Home() {
 						<div className="w-full py-12 md:max-w-3xl md:px-0 md:py-16 xl:max-w-6xl flex flex-col gap-y-16 md:gap-y-32 pt-0 md:pt-0">
 							<div className="relative flex flex-col items-center justify-center gap-6 px-4 pt-8 text-center md:pt-12">
 								<h1 className="leading-tight! text-balance text-5xl tracking-tight md:px-0 md:text-6xl">
-									Accept Global Payments from Nepal
+									Accept Global Payments as a Nepalese Developer
 								</h1>
 								<p className="max-w-3xl text-balance text-center text-xl leading-relaxed! text-gray-500">
 									Enable Nepalese developers to accept global payments and
