@@ -31,8 +31,7 @@ export function Footer() {
 							rel="noopener noreferrer"
 							className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
 						>
-							<TwitterIcon className="size-4" />
-							<span>X / Twitter</span>
+							X / Twitter
 						</Link>
 					</div>
 					<p className="">&copy; Rupay, LLC. {new Date().getFullYear()}</p>
