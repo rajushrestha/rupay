@@ -1,38 +1,37 @@
 import { Header } from "@/app/components/layout/header";
 import { Footer } from "@/app/components/layout/footer";
 import { HeroSection } from "./components/hero-section";
-import { SectionNavigation } from "./components/section-navigation";
 import { ContentSections } from "./components/content-sections";
 import { CtaSection } from "./components/cta-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+	title: "Rupay as Merchant of Record | Handle Global Tax Compliance",
 	description:
-		"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported. Comprehensive payment platform with merchant of record services.",
+		"Rupay acts as your Merchant of Record, handling all international sales tax compliance, VAT, GST, and sales tax requirements globally. Perfect for Nepalese developers who want to sell worldwide without navigating complex tax regulations.",
 	alternates: {
-		canonical: "/why-rupay",
+		canonical: "/merchant-of-record",
 	},
 	openGraph: {
-		title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+		title: "Rupay as Merchant of Record | Handle Global Tax Compliance",
 		description:
-			"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
+			"Rupay acts as your Merchant of Record, handling all international sales tax compliance, VAT, GST, and sales tax requirements globally.",
 		type: "article",
 		locale: "en_US",
 		siteName: "Rupay",
-		url: "/why-rupay",
+		url: "/merchant-of-record",
 		publishedTime: "2025-01-01T00:00:00Z",
 		modifiedTime: new Date().toISOString(),
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Why Choose Rupay? | Enable Global Payments from Nepal",
+		title: "Rupay as Merchant of Record | Handle Global Tax Compliance",
 		description:
-			"Rupay enables Nepalese developers to accept global payments and monetize their software worldwide.",
+			"Rupay acts as your Merchant of Record, handling all international sales tax compliance globally.",
 	},
 };
 
-export default function WhyPage() {
+export default function MerchantOfRecordPage() {
 	return (
 		<div className="flex flex-col gap-y-2 md:w-full">
 			<Header />
@@ -42,8 +41,6 @@ export default function WhyPage() {
 					<div className="relative flex flex-col md:items-center">
 						<div className="w-full py-12 md:max-w-3xl md:px-0 md:py-16 xl:max-w-6xl flex flex-col md:gap-y-32 gap-y-16 pt-0 md:pt-0">
 							<HeroSection />
-
-							<SectionNavigation />
 
 							<ContentSections />
 

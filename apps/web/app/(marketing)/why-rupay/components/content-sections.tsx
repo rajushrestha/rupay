@@ -11,10 +11,7 @@ export function ContentSections() {
 	return (
 		<div className="max-w-4xl mx-auto flex flex-col gap-y-20 bg-white rounded-4xl md:p-10 py-10 px-4">
 			{/* Introduction Section */}
-			<section
-				id="introduction"
-				className="flex flex-col gap-y-8 px-4 md:px-0"
-			>
+			<section id="introduction" className="flex flex-col gap-y-8 px-4 md:px-0">
 				<h2 className="text-3xl md:text-4xl font-semibold">
 					{INTRODUCTION_CONTENT.title}
 				</h2>
@@ -48,9 +45,7 @@ export function ContentSections() {
 						{MERCHANT_OF_RECORD_CONTENT.features.map((feature, index) => (
 							<li key={index} className="flex flex-row items-start gap-x-3">
 								<CheckIcon className="size-5 text-emerald-500 mt-0.5 shrink-0" />
-								<span className="text-lg text-muted-foreground">
-									{feature}
-								</span>
+								<span className="text-lg text-muted-foreground">{feature}</span>
 							</li>
 						))}
 					</ul>
@@ -95,10 +90,7 @@ export function ContentSections() {
 			</section>
 
 			{/* Why Choose Rupay Section */}
-			<section
-				id="why-switch"
-				className="flex flex-col gap-y-8 px-4 md:px-0"
-			>
+			<section id="why-switch" className="flex flex-col gap-y-8 px-4 md:px-0">
 				<h2 className="text-3xl md:text-4xl font-semibold">
 					{WHY_CHOOSE_CONTENT.title}
 				</h2>

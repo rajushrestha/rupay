@@ -3,6 +3,33 @@ import { Footer } from "@/app/components/layout/footer";
 import { Button } from "@workspace/ui/components/button";
 import { ArrowUpRightIcon } from "lucide-react";
 import { WaitlistDialog } from "@/app/components/waitlist-dialog";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Rupay Pricing | 5% + 0.5¢ per Transaction",
+	description:
+		"Affordable pricing designed for Nepalese developers to accept global payments and scale their software businesses worldwide. Cheapest MoR on the market at 5% + 0.5¢ per transaction.",
+	alternates: {
+		canonical: "/pricing",
+	},
+	openGraph: {
+		title: "Rupay Pricing | 5% + 0.5¢ per Transaction",
+		description:
+			"Affordable pricing designed for Nepalese developers to accept global payments. Cheapest MoR on the market at 5% + 0.5¢ per transaction.",
+		type: "article",
+		locale: "en_US",
+		siteName: "Rupay",
+		url: "/pricing",
+		publishedTime: "2025-01-01T00:00:00Z",
+		modifiedTime: new Date().toISOString(),
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Rupay Pricing | 5% + 0.5¢ per Transaction",
+		description:
+			"Affordable pricing designed for Nepalese developers. Cheapest MoR on the market at 5% + 0.5¢ per transaction.",
+	},
+};
 
 export default function PricingPage() {
 	return (
@@ -18,6 +45,9 @@ export default function PricingPage() {
 								<h1 className="leading-tight! text-balance text-4xl tracking-tight md:px-0 md:text-6xl">
 									Rupay Pricing
 								</h1>
+								<p className="max-w-3xl text-balance text-center text-xl leading-relaxed! text-gray-500">
+									Affordable pricing designed for Nepalese developers to accept global payments and scale their software businesses worldwide.
+								</p>
 							</div>
 
 							<div className="max-w-4xl mx-auto flex flex-col gap-y-20 bg-white rounded-4xl md:p-10 py-10 px-4">
@@ -33,7 +63,7 @@ export default function PricingPage() {
 											</h3>
 											<p className="text-lg text-muted-foreground">
 												Rupay is priced 20% cheaper than other MoR alternatives.
-												5% and 50¢ per transaction.
+												5% + 0.5¢ per transaction.
 											</p>
 										</div>
 										<div className="flex flex-col gap-y-4">
@@ -54,7 +84,7 @@ export default function PricingPage() {
 									</h2>
 									<div className="flex flex-col gap-y-6">
 										<h3 className="text-2xl font-semibold">
-											5% + 50¢ per transaction
+											5% + 0.5¢ per transaction
 										</h3>
 										<p className="text-lg text-muted-foreground">
 											Rupay is currently built on Stripe, and we cover their
@@ -126,9 +156,9 @@ export default function PricingPage() {
 													</tr>
 													<tr className="flex justify-between border-b border-border pb-2">
 														<td className="text-lg text-muted-foreground">
-															Transaction Fee (5% + 50¢)
+															Transaction Fee (5% + 0.5¢)
 														</td>
-														<td className="text-lg font-medium">$2.38</td>
+														<td className="text-lg font-medium">$1.88</td>
 													</tr>
 													<tr className="flex justify-between border-b border-border pb-2">
 														<td className="text-lg text-muted-foreground">
@@ -146,7 +176,7 @@ export default function PricingPage() {
 														<td className="text-lg font-semibold">
 															Total Fees (Before Payout)
 														</td>
-														<td className="text-lg font-semibold">$3.13</td>
+														<td className="text-lg font-semibold">$2.63</td>
 													</tr>
 												</tbody>
 											</table>
@@ -297,11 +327,10 @@ export default function PricingPage() {
 							<section className="flex flex-col items-center gap-y-8 px-4 py-10 md:px-0 md:py-16">
 								<div className="flex flex-col items-center gap-y-6 text-center">
 									<h3 className="text-4xl font-semibold">
-										Ready to get started?
+										Ready to go global?
 									</h3>
 									<p className="text-lg text-muted-foreground max-w-2xl">
-										Start monetizing your software today with Rupay. Get up and
-										running in minutes with our simple integration process.
+										Join Nepalese developers building global software businesses. Start accepting payments worldwide with Rupay&apos;s simple integration.
 									</p>
 									<WaitlistDialog />
 								</div>

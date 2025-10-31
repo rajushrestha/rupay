@@ -28,7 +28,31 @@ import {
 } from "@workspace/ui/components/select";
 import { Footer } from "@/app/components/layout/footer";
 import { WaitlistDialog } from "../components/waitlist-dialog";
-import { Globe } from "../components/globe";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Accept Global Payments from Nepal",
+	description:
+		"Enable Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
+	alternates: {
+		canonical: "/",
+	},
+	openGraph: {
+		title: "Accept Global Payments from Nepal | Rupay",
+		description:
+			"Enable Nepalese developers to accept global payments and monetize their software worldwide. Built on Stripe for regions where Stripe isn't supported.",
+		type: "website",
+		locale: "en_US",
+		siteName: "Rupay",
+		url: "/",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Accept Global Payments from Nepal | Rupay",
+		description:
+			"Enable Nepalese developers to accept global payments and monetize their software worldwide.",
+	},
+};
 
 export default function Home() {
 	return (
@@ -41,10 +65,12 @@ export default function Home() {
 						<div className="w-full py-12 md:max-w-3xl md:px-0 md:py-16 xl:max-w-6xl flex flex-col gap-y-16 md:gap-y-32 pt-0 md:pt-0">
 							<div className="relative flex flex-col items-center justify-center gap-6 px-4 pt-8 text-center md:pt-12">
 								<h1 className="leading-tight! text-balance text-5xl tracking-tight md:px-0 md:text-6xl">
-									Monetize your software
+									Accept Global Payments from Nepal
 								</h1>
 								<p className="max-w-3xl text-balance text-center text-xl leading-relaxed! text-gray-500">
-									Turn your software into a business with 6 lines of code
+									Enable Nepalese developers to accept global payments and
+									monetize their software worldwide. Built on Stripe for regions
+									where Stripe isn&apos;t supported.
 								</p>
 								<div className="mt-6 flex flex-col items-center gap-4 md:flex-row md:gap-6">
 									<WaitlistDialog />
@@ -193,7 +219,7 @@ export default function Home() {
 									<div className="flex flex-col gap-y-6">
 										<Link
 											className="p-6! flex h-full flex-col justify-between gap-x-6 gap-y-6 rounded-2xl border border-transparent bg-background transition-transform hover:translate-y-[-4px] md:p-10 xl:gap-y-0"
-											href="/resources/merchant-of-record"
+											href="/merchant-of-record"
 										>
 											<div className="flex h-full flex-col gap-y-6">
 												<div className="flex h-full flex-col gap-y-2 md:gap-y-6">
@@ -237,17 +263,17 @@ export default function Home() {
 								</div>
 							</section>
 							<section>
-								<Link target="_blank" href="/blog/rupay-seed-announcement">
+								<Link href="/early-access">
 									<div className="md:rounded-4xl flex w-full flex-col gap-y-12 overflow-hidden rounded-2xl bg-white">
 										<div className="flex flex-col items-center gap-y-8 px-8 pt-8 md:px-16 md:pt-16">
 											<span className="text-lg text-muted-foreground">
 												Early Access
 											</span>
-											<h1 className="w-fit max-w-2xl text-pretty text-center text-2xl md:text-4xl md:leading-normal">
+											<h2 className="w-fit max-w-2xl text-pretty text-center text-2xl md:text-4xl md:leading-normal">
 												Releasing Rupay for Early Access
-											</h1>
+											</h2>
 											<Button>
-												<span>Read the release note</span>
+												<span>Read the announcement</span>
 												<ArrowUpRightIcon className="size-4" />
 											</Button>
 										</div>
@@ -274,12 +300,12 @@ export default function Home() {
 										<span className="text-lg text-muted-foreground">
 											Built for simplicity
 										</span>
-										<h1 className="w-fit max-w-2xl text-pretty text-center text-2xl md:text-4xl md:leading-normal">
+										<h2 className="w-fit max-w-2xl text-pretty text-center text-2xl md:text-4xl md:leading-normal">
 											Powerful Checkouts Made Simple
-										</h1>
-										<Button>
+										</h2>
+										<Button variant="secondary" disabled>
 											<span>Integrate Checkouts</span>
-											<ArrowUpRightIcon className="size-4" />
+											<span className="text-xs">(Coming Soon)</span>
 										</Button>
 									</div>
 									<div className="relative h-[300px] md:h-[490px] overflow-hidden">
@@ -322,7 +348,7 @@ export default function Home() {
 																</FieldLabel>
 																<Input
 																	id={useId()}
-																	placeholder="Evil Rabbit"
+																	placeholder="John Doe"
 																	required
 																/>
 															</Field>
@@ -429,9 +455,9 @@ export default function Home() {
 										<span className="dark:text-polar-500 text-lg text-gray-400">
 											Early Member Pricing
 										</span>
-										<h1 className="w-fit max-w-xl pt-8 pb-12 text-center text-2xl text-pretty md:text-4xl">
-											5% + 50¢ per transaction
-										</h1>
+										<h2 className="w-fit max-w-xl pt-8 pb-12 text-center text-2xl text-pretty md:text-4xl">
+											5% + 0.5¢ per transaction
+										</h2>
 										<Button asChild>
 											<Link href="/pricing">
 												<span>Learn more</span>
