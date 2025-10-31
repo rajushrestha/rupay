@@ -25,12 +25,26 @@ export function Globe() {
 
 		let phi = 0;
 		let width = 0;
+		let resizeTimeout: NodeJS.Timeout | null = null;
+
 		const onResize = () => {
 			if (canvasRef.current) {
 				width = canvasRef.current.offsetWidth;
 			}
 		};
-		window.addEventListener("resize", onResize);
+
+		// Debounce resize handler to avoid excessive updates
+		const debouncedResize = () => {
+			if (resizeTimeout) {
+				clearTimeout(resizeTimeout);
+			}
+			resizeTimeout = setTimeout(() => {
+				onResize();
+				resizeTimeout = null;
+			}, 100);
+		};
+
+		window.addEventListener("resize", debouncedResize);
 		onResize();
 
 		const canvas = canvasRef.current;
@@ -79,17 +93,22 @@ export function Globe() {
 			},
 		});
 
-		setTimeout(() => {
+		const timeoutId = setTimeout(() => {
 			if (canvasRef.current) {
 				canvasRef.current.style.opacity = "1";
 			}
 		});
 
 		return () => {
+			clearTimeout(timeoutId);
+			if (resizeTimeout) {
+				clearTimeout(resizeTimeout);
+			}
 			globe.destroy();
-			window.removeEventListener("resize", onResize);
+			window.removeEventListener("resize", debouncedResize);
 		};
-	}, [isMobile, r]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isMobile]);
 
 	return (
 		<canvas

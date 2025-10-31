@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 export function SectionNavigation() {
 	const [activeSection, setActiveSection] = useState<string>("introduction");
 	const isScrollingRef = useRef(false);
+	const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
 	const scrollToSection = (sectionId: string) => {
 		isScrollingRef.current = true;
@@ -13,12 +14,26 @@ export function SectionNavigation() {
 		const element = document.getElementById(sectionId);
 		if (element) {
 			element.scrollIntoView({ behavior: "smooth", block: "start" });
+			// Clear any existing timeout
+			if (timeoutRef.current) {
+				clearTimeout(timeoutRef.current);
+			}
 			// Reset scrolling flag after animation completes
-			setTimeout(() => {
+			timeoutRef.current = setTimeout(() => {
 				isScrollingRef.current = false;
+				timeoutRef.current = null;
 			}, 1000);
 		}
 	};
+
+	// Cleanup timeout on unmount
+	useEffect(() => {
+		return () => {
+			if (timeoutRef.current) {
+				clearTimeout(timeoutRef.current);
+			}
+		};
+	}, []);
 
 	useEffect(() => {
 		const observerOptions = {
