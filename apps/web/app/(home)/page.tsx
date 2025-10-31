@@ -280,8 +280,7 @@ export default function Home() {
 										<div
 											className="relative m-2 flex h-96 items-center justify-center rounded-xl md:m-4 md:rounded-3xl"
 											style={{
-												backgroundImage:
-													"url('/assets/landing/abstract-1.png')",
+												backgroundImage: "url('/assets/background.jpg')",
 												backgroundSize: "cover",
 												backgroundPosition: "center center",
 											}}

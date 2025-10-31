@@ -109,17 +109,7 @@ export default async function Image() {
 							lineHeight: 1.2,
 						}}
 					>
-						Rupay Pricing
-					</div>
-					<div
-						style={{
-							fontSize: 36,
-							fontWeight: "bold",
-							color: "#ffffff",
-							marginTop: "10px",
-						}}
-					>
-						5% + 0.5¢ per transaction
+						Terms of Use
 					</div>
 					<div
 						style={{
@@ -129,8 +119,7 @@ export default async function Image() {
 							opacity: 0.9,
 						}}
 					>
-						Affordable pricing designed for Nepalese developers to accept global
-						payments
+						Legal terms and conditions for using Rupay payment platform
 					</div>
 				</div>
 			</div>

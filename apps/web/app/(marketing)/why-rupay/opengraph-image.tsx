@@ -11,10 +11,10 @@ export const contentType = "image/jpeg";
 
 export default async function Image() {
 	// Read the image file from the public directory
-	const imagePath = join(process.cwd(), "public", "assets", "landing", "abstract-1.png");
+	const imagePath = join(process.cwd(), "public", "assets", "background.jpg");
 	const imageBuffer = await readFile(imagePath);
 	const imageBase64 = imageBuffer.toString("base64");
-	const imageDataUrl = `data:image/png;base64,${imageBase64}`;
+	const imageDataUrl = `data:image/jpeg;base64,${imageBase64}`;
 
 	return new ImageResponse(
 		<div
